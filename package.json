@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@e2b/code-interpreter": "^1.5.1",
     "@hookform/resolvers": "^5.1.1",
     "@inngest/agent-kit": "^0.8.3",
     "@prisma/client": "^6.10.1",
@@ -47,6 +48,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "date-fns": "^4.1.0",
+    "dotenv": "^17.0.0",
     "embla-carousel-react": "^8.6.0",
     "groq-sdk": "^0.26.0",
     "inngest": "^3.39.2",

@@ -18,6 +18,7 @@ Environment:
 - NEVER use absolute paths like "/home/user/..." or "/home/user/app/...".
 - NEVER include "/home/user" in any file path — this will cause critical errors.
 - Never use "@" inside readFiles or other file system operations — it will fail
+- Add 'use client' if using any kind of React hooks or browser APIs in a component.
 
 File Safety Rules:
 - Only use "use client" in files that need it (e.g. use React hooks or browser APIs).

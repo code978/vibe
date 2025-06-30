@@ -14,18 +14,17 @@ const page = () => {
   const [value, setValue] = useState("");
   const trpc = useTRPC();
 
-  const {data: messages} = useQuery(trpc.message.getMany.queryOptions());
-
-
+  
+  
   const createProject = useMutation(trpc.project.create.mutationOptions({
-  onError: (error) => {
-    toast.success(error.message);
-  },
-  onSuccess: (data) => {
-    console.log(data);
-    router.push(`/projects/${data.id}`)    
-  }
-}));
+    onError: (error) => {
+      toast.success(error.message);
+    },
+    onSuccess: (data) => {
+      console.log(data);
+      router.push(`/projects/${data.id}`)    
+    }
+  }));
 
   return (
     <div className="h-screen w-screen flex items-center justify-center">
@@ -36,7 +35,6 @@ const page = () => {
       onClick={() => createProject.mutate({ value: value })}>
         Invoke Background Job
         </Button>
-        {JSON.stringify(messages,null,2)}
         </div>
     </div>
   );
